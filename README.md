@@ -1,6 +1,6 @@
 # Tutorial: Customizing a Bootstrap Template
 
-This tutorial consists of customizing a Bootstrap template. You will practice your skills for:
+This tutorial consists of customizing a Bootstrap template. You will practice your skills on:
 
 - Choosing and elaborating on the topic for a webpage
 - Creating content for a webpage
@@ -8,15 +8,15 @@ This tutorial consists of customizing a Bootstrap template. You will practice yo
 
 ## Instructions
 
-Think of a place that you have enjoyed visiting in your life. The place you chose will serve as the topic of your webpage.
+Think of a place that you have enjoyed visiting in your life. The site you chose will serve as the topic of your webpage.
 
-Then, think of three stories that illustrate the place you chose. These stories will serve as the content of your webpage. Although each story is different, all of them should relate to your webpage's topic, making your webpage distinct while maintaining the focus of your webpage on a single idea. Selecting and elaborating on a topic makes it easier to concretize a message in our webpages and create content, such as images and text, to communicate the message.
+Then, think of three stories that illustrate the place you chose. These stories will serve as the content of your webpage. Although each story is different, all of them should relate to your webpage's topic, making your webpage distinct while maintaining the focus of your webpage on a single idea. Selecting and elaborating on a topic makes it easier to concretize a message on our web pages and create content, such as images and text, to communicate the message.
 
-After you decide on a place and three related stories, complete the following tasks.
+After deciding on a place and three related stories, complete the following tasks.
 
 ## Task 0: Get the template
 
-We will use the [One Page Wonder](https://startbootstrap.com/theme/one-page-wonder) template from the [Start Bootstrap](https://startbootstrap.com/) website. Download the template from [here](http://na).
+We will use the [One Page Wonder](https://startbootstrap.com/theme/one-page-wonder) template from the [Start Bootstrap](https://startbootstrap.com/) website. Download the template from [here](https://github.com/josecarlosgt/bootsrap/blob/tutorial-templates-landmark/landmark-template.zip?raw=true).
 
 ## Task 1: Customize the page's settings
 
@@ -29,7 +29,7 @@ Update the webpage head settings.
 
 ## Task 2: Customize the favicon image
 
-Note the folder assets contains an image called "favicon.ico" that is displayed next to the page's title on the broswer address bar.
+Note that the folder assets contain an image called "favicon.ico" displayed next to the page's title on the browser address bar.
 
 > A favicon (short for favorite icon) is a file containing small icons associated with a particular website or web page. Browsers that support favicon display show the page's favicon in the browser's address bar and next to the page's name in a list of bookmarks.
 
@@ -43,7 +43,7 @@ Then, place the .ico image in the assets/ folder and update the link element wit
 
 ## Task 3: Customize the header
 
-Customize the webpage a main heading and introduction (welcome blurb or subheading). These texts should represent the topic you chose. 
+Customize the webpage with a main heading and introduction (welcome blurb or subheading). These texts should represent the topic you chose. 
 
 ```html
 <h1 ...>[Main header]</h1>
@@ -61,23 +61,23 @@ Update each section's Lorem ipsum placeholder text by writing one or two stateme
 </div>
 ```
 
- Update each story by adding an image of your choice to each story. Remember to update the alt attribute of each image element with a description of your images. 
+ Update each story by adding an image of your choice to each story. Remember to update the alt attribute of each image element with a description of your pictures. 
 
 ```html
 <img ... src="http://placehold.jp/700x700.png" alt="..." /></div>
 ```
 
-> Try to obtain images of about of size 700 x 700 px. Also, all your images should be of the same size.
+> Try to obtain images of about of size 700 x 700 px. Also, all your pictures should be of the same size.
 
 ## Task 5: Customize the general description
 
-Customize the About section at the end of the webpage. You can include any text that complements the content in your stories. For example, you may add a general description of the place or tell something about its location, such as the country or local culture. 
+Customize the About section at the end of the webpage. You can include any text that complements the content in your stories. For example, you may add a general description of the place or say something about its location, such as the country or local culture. 
 
-Add a [slider](https://getbootstrap.com/docs/5.0/components/carousel/) with controls with three images. The images can also be of size 700 x 700 px. All your images should be of the same size. Your images should be related to the content in this section.
+Add a [slider](https://getbootstrap.com/docs/5.0/components/carousel/) with controls with three images. The images can also be of size 700 x 700 px. All your images should be of the same size. Your pictures should be related to the content in this section.
 
 ## Task 6: Update the navigation bar
 
-Customize the navigation bar so that the text in each link describes each story. Also, add an additional link for the About section. 
+Customize the navigation bar so that the text in each link describes each story. Also, add a link for the About section. 
 
 ## Task 7: Publish your webpage on GitHub Pages
 
