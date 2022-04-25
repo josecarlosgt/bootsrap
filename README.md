@@ -1,2 +1,2 @@
 # Bootstrap
-Bootsrap Tutorials
+Bootstrap Tutorials
