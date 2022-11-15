@@ -16,7 +16,7 @@ After deciding on a place and three related stories, complete the following task
 
 ## Task 0: Get the template
 
-We will use the [One Page Wonder](https://startbootstrap.com/theme/one-page-wonder) template from the [Start Bootstrap](https://startbootstrap.com/) website. Download the template from [here](https://github.com/josecarlosgt/bootsrap/blob/tutorial-templates-landmark/landmark-template.zip?raw=true).
+We will use the [One Page Wonder](https://startbootstrap.com/theme/one-page-wonder) template from the [Start Bootstrap](https://startbootstrap.com/) website. You can download the original template from the Start Bootstrap or download a pre-customized template from [here](https://github.com/josecarlosgt/bootsrap/blob/tutorial-templates-landmark/landmark-template.zip?raw=true). The pre-customized template will make it easier to work on Task 5.
 
 ## Task 1: Customize the page's settings
 
@@ -69,11 +69,11 @@ Update each section's Lorem ipsum placeholder text by writing one or two stateme
 
 > Try to obtain images of about of size 700 x 700 px. Also, all your pictures should be of the same size.
 
-## Task 5: Customize the general description
+## Task 5: Add an an About section
 
-Customize the About section at the end of the webpage. You can include any text that complements the content in your stories. For example, you may add a general description of the place or say something about its location, such as the country or local culture. 
+Add an About section at the end of the webpage. You can include any text that complements the content in your stories. For example, you may add a general description of the place or say something about its location, such as the country or local culture. 
 
-Add a [slider](https://getbootstrap.com/docs/5.0/components/carousel/) with controls with three images. The images can also be of size 700 x 700 px. All your images should be of the same size. Your pictures should be related to the content in this section.
+Add a content panel, such as a [slider](https://getbootstrap.com/docs/5.0/components/carousel/), to practice your Bootstap skills. If adding slider, remember that images should be of the same size (e.g., 700 x 700 px). Also, your pictures should be related to the content in this section.
 
 ## Task 6: Update the navigation bar
 
