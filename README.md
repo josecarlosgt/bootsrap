@@ -1,6 +1,6 @@
-# Tutorial: Customizing a Bootstrap Template
+# Customizing a Bootstrap Template
 
-This tutorial consists of customizing a Bootstrap template. You will practice your skills on:
+This worksheet consists of customizing a Bootstrap template. You will practice your skills on:
 
 - Choosing and elaborating on the topic for a webpage
 - Creating content for a webpage
