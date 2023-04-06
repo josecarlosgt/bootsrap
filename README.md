@@ -63,7 +63,7 @@ The feature [display headings](https://getbootstrap.com/docs/5.0/content/typogra
 Add "display-2" to h1, "display-5" to h2, and "display-6" to h3 elements:
 
 ```html
-<h1 class="display-2">...</h1>
+<h1 class="display-1">...</h1>
 <h2 class="display-5">...</h2>
 <h3 class="display-6">...</h3>
 ```
@@ -102,14 +102,12 @@ Images in Bootstrap are made responsive with the *.img-fluid* class. Add this cl
 ...
 ```
 
-> Download a larger image from [here](https://josecarlosgt.github.io/Web-Design-and-Development/img/panoramic-laguna-brava-2.jpg) that can fit larger screens. 
-
 Notes:
 - Adding responsive behavior usually involves adjusting the [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp) CSS property of HTML elements. This property defines the maximum width of an element's content and it prevents the element from becoming larger than the value specified by max-width.
 - img-fluid maintains a 100% max-width regardless of the size of the screen, so images never become larger than their parent elements (containers). As a result, images are resized to fit the screen.
  
 
-## Task 4: Leveraging class utilities for text
+## Task 4: Class utilities for text
 
 ### Text: [Bootstrap Docs > Utilities > Text](https://getbootstrap.com/docs/5.0/utilities/text/)
 
@@ -132,13 +130,13 @@ Using [text decoration](https://getbootstrap.com/docs/5.0/utilities/text/#text-d
 Using [text alignment](https://getbootstrap.com/docs/5.0/utilities/text/#text-alignment) classes, center the main heading and the headings in guided visits sections:
 
 ```html
-<h1 class="display-2 text-center">...</h1>
+<h1 class="display-1 text-center">...</h1>
 <h3 class="display-6 text-center">...</h3>
 ```
 Notes:
 - Text alignment classes also include *text-start* for aligning text to the left and *text-end* for aligning text to the right. 
 
-## Task 5: Leveraging class utilities for borders
+## Task 5: Class utilities for borders
 
 Reference: [Bootstrap Docs > Utilities > Borders](https://getbootstrap.com/docs/5.0/utilities/borders/)
 
@@ -149,14 +147,10 @@ Many of these utility classes for styling content follow conventions on how to r
 
 These terms act as suffixes in several classes that control style aspects such as borders, alignment, and spacing, as you will see below.
 
-Border utilities allow you to style the border and border-radius of an element like images and buttons. For example:
+Give a border to each article:
 
 ```html
-<span class="border"></span>
-<span class="border-top"></span>
-<span class="border-end"></span>
-<span class="border-bottom"></span>
-<span class="border-start"></span>
+<article class="border border-secondary border-2" >
 ```
 
 [Border-radius](https://getbootstrap.com/docs/5.0/utilities/borders/#border-radius) classes in Bootstrap allow you to modify the border-radius property. [border-radius](https://www.w3schools.com/cssref/css3_pr_border-radius.asp) is a CSS property that defines the radius of an element's corners. Round the corner of the guided visits images: 
@@ -167,7 +161,7 @@ Border utilities allow you to style the border and border-radius of an element l
 
 > This effect gives the images a more natural appearance by eliminating the abrupt pauses that result when lines change direction in sharp corners.
 
-## Task 6: Leveraging class utilities for colors
+## Task 6: Class utilities for colors
 
 Reference: [Bootstrap Docs > Utilities > Colors](https://getbootstrap.com/docs/5.0/utilities/colors/)
 
@@ -179,7 +173,7 @@ Color utilities include predefined classes to colorize text. Adjust the color an
 
 Bootstrap enables more comprehensive customization for working with colors. For now, we will use the default [color system](https://getbootstrap.com/docs/5.0/customize/color/). You can also use this system for defining [background colors](https://getbootstrap.com/docs/5.0/utilities/background/) of any HTML element.
 
-## Task 7: Leveraging class utilities for spacing
+## Task 7: Class utilities for spacing
 
 Reference: [Bootstrap Docs > Utilities > Spacing](https://getbootstrap.com/docs/5.0/utilities/spacing/)
 
@@ -190,7 +184,7 @@ Add a gap between the sections following the lead paragraph by adding a vertical
 Add the *div* container to the "Local Communities" and "Activities" sections:
 
 ```html
-<section class="my-4">
+<section class="my-5">
     <h2 class="display-5">...</h2>
     <p>
         ...
@@ -198,7 +192,7 @@ Add the *div* container to the "Local Communities" and "Activities" sections:
 </section>
 ```
 
-Note that *my-4* follows the notation {property}{sides}-{size} where
+Note that *my-5* follows the notation {property}{sides}-{size} where
 - {property} is *m* (margin)
 - {sides} is *y* (vertical)
 - {size} is *4*
@@ -220,22 +214,22 @@ Reference: https://icons.getbootstrap.com/
 Finally, try out Bootstrap Icons library for adding icons to your webpage. To use Bootstrap icons library, you need to add the corresponding CSS resource into the \<head\> tag:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 ```
 
 Remember we adjusted the color of the warning statement in the first guided visit option? Add an exclamation icon to increase the attention of the viewer:
 
 ```html
-<i class="bi bi-exclamation-triangle"></i>
+<i class="bi-exclamation-triangle"></i>
 ```
 >Icons are also a great way to make your content more accessible for people with color blindness.
 
 Final result:
 ```html
-Cross the four kilometres in a kayak guided by a local guide. <strong class="text-warning fw-bold"><i class="bi bi-exclamation-triangle"></i> This guided visit is physically demanding, and we recommend it for only those in excellent physical condition.</strong>
+Cross the four kilometres in a kayak guided by a local guide. <strong class="text-warning fw-bold"><i class="bi-exclamation-triangle"></i> This guided visit is physically demanding, and we recommend it for only those in excellent physical condition.</strong>
 ```
 
-## Part II: Understanding Bootstrap's Layout System 
+## Part II: Bootstrap's Layout System 
 
 ## Task 10: Creating containers
 Reference: [Bootstrap Docs > Layout > Containers](https://getbootstrap.com/docs/5.0/layout/containers/)
@@ -263,12 +257,6 @@ Bootstrap containers allow you to tailor the content of your webpage to fit a sp
 
 Each breakpoint has a dimension associated that represents a particular viewport or device screen size. The breakpoints serve as a system to specify responsive behavior in HTML elements. For example, if you want to tailor your webpage to be displayed in *large* screens (i.e., 992 pixels width or wider), you can wrap the webpage's content into a *container-lg* class container:
 
-```html
-<div class="container-lg">100% wide until larger breakpoint</div>
-```
-
-This means the *div* container will keep constant widths to fit your content in large screens, *preserving paddings and center alignment.* If your webpage is displayed on smaller screens, the content will automatically occupy 100% of the screen. More technically, the breakpoints system specifies values for the max-width property.
-
 Use containers for the top image and main heading inside the \<header\> element and the main content:
 ```html
 <header>
@@ -282,9 +270,7 @@ Use containers for the top image and main heading inside the \<header\> element 
 </main>
 ```
 
-Experiment with different container classes to appreciate the difference. What happens if you use the *container-xxl* class instead of the default container? Use the inspector tool to appreciate the difference.
-
-## Task 11: Adjusting the grid layout
+## Task 11: Adjusting the layout
 Reference: [Bootstrap Docs > Layout > Containers](https://getbootstrap.com/docs/5.0/layout/containers/)
 
 [Bootstrap's grid layout system](https://getbootstrap.com/docs/5.0/layout/grid/) allows you to arrange content in columns and rows following a fully responsive design. The grid layout uses a twelve-column system which means the width of a single column can vary from one to twelve.
@@ -324,18 +310,47 @@ Use the *col-lg* class to display the content of the website as two columns for 
 
 > The code above specifies the behavior at and over the large (lg) breakpoint, i.e., display the content in two columns when screen size hits the large (lg) breakpoint.
 
-Adjust the spacing between each \<article\> to add gaps both horiontally and vertically using horizontal padding (*px*) and bottom margin (*mb*) classes:
+Adjust the spacing between each \<article\> to add gaps both horiontally and vertically using padding (*p*) and margin (*m*) utilities:
 
 Result:
 ```html
 <section class="my-4 row">
-    <article class="col-lg px-5 mb-4">
+    <article class="col-lg my-2 py-2 mx-lg-1 px-2 border border-secondary border-2">
         ...        
     </article>
-    <article class="col-lg px-5 mb-4">
+    <article class="col-lg my-2 py-2 mx-lg-1 px-2 border border-secondary border-2">
         ...
     </article>
 </div>
+```
+
+> Note that *my* and *py* adjust the vertical margin and padding of each article while *mx* and *px* adjust the horizontal margin and padding, respectively.
+
+## Task 12: Adjusting the form
+
+Adjust the contact form in a two-column grid. The heading and description of the form should be in the first column and the form in the second column. Make the first column narrower than the second column by varying the number of template columns in each column.
+
+```html
+<aside class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-4"> 
+            ...
+        </div>
+        <div class="col-lg-8"> 
+            ...
+        </div>
+    </div>
+</aside>
+```
+
+> Note that the content of the first column (heading and form's description) is also vertically centered due to the *align-items-center* class on the row container.
+
+## Task 13: Adjusting the footer
+
+Center the copyright notice on the page's footer:
+
+```html
+<footer class="text-center my-5 pt-3 border-top">...</footer>
 ```
 
 > The [index.html](./index.html) file contains the final HTML document. You can view this webpage in GitHub Pages [here](https://josecarlosgt.github.io/Web-Design-and-Development/).
