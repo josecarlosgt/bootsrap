@@ -275,24 +275,6 @@ Reference: [Bootstrap Docs > Layout > Containers](https://getbootstrap.com/docs/
 
 [Bootstrap's grid layout system](https://getbootstrap.com/docs/5.0/layout/grid/) allows you to arrange content in columns and rows following a fully responsive design. The grid layout uses a twelve-column system which means the width of a single column can vary from one to twelve.
 
-This system allows you, for example, to arrange your content three columns of size four each:
-
-```html
-<div class="container">
-  <div class="row">
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
-</div>
-```
-
 When arranging your content in columns using Bootstrap grid system, you need to use a combination of *col* classes wrapped inside a *row* class container. Furthermore, you can add breakpoints to create a grid system that starts out stacked and becomes horizontal at a given breakpoint.
 
 Use the *col-lg* class to display the content of the website as two columns for large screens (*lg* breakpoint) and as one column for smaller screens:
