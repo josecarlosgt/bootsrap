@@ -73,8 +73,6 @@ Update each section's Lorem ipsum placeholder text by writing one or two stateme
 
 Add an About section at the end of the webpage. You can include any text that complements the content in your stories. For example, you may add a general description of the place or say something about its location, such as the country or local culture. 
 
-Add a content panel, such as a [slider](https://getbootstrap.com/docs/5.0/components/carousel/), to practice your Bootstap skills. If adding slider, remember that images should be of the same size (e.g., 700 x 700 px). Also, your pictures should be related to the content in this section.
-
 ## Task 6: Update the navigation bar
 
 Customize the navigation bar so that the text in each link describes each story. Also, add a link for the About section. 
