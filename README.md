@@ -48,7 +48,16 @@ We will use the following text to complete the tasks below:
 
 ## Part I: Basic Bootstrap 
 
-## Task 1: Installing Bootstrap
+## Task 1: Page's settings and introduction
+
+Let's first specify the page's title and meta description:
+
+```html
+<title>[PAGE TITLE]</title>
+<meta name="description" content="[DESCRIPTION]" />
+```
+
+## Task 2: Installing Bootstrap
 Reference: [Bootstrap Docs > Introduction](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
 The easiest way to add Bootstrap to your website is using the content delivery network (CDN) servers recommended by Boostrap. Other ways of using Bootstrap require downloading the source files, which allows higher customization.
@@ -81,7 +90,7 @@ Put it all together and your webpage should look like this:
 
 > Learn more about the [integrity \(subresource integrity\)](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) and [crossorigin](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) attributes.
 
-## Task 2: Styling text content
+## Task 3: Styling text content
 
 ### Reboot: [Bootstrap Docs > Content > Reboot](https://getbootstrap.com/docs/5.3/content/reboot/)
 
@@ -111,21 +120,6 @@ Apply the *lead* class to the paragraphs in the header and transparency sections
 </p>
 ```
 
-## Task 3: Styling images content
-
-Reference: [Bootstrap Docs > Content > Images](https://getbootstrap.com/docs/5.3/content/images/)
-
-Images in Bootstrap are made responsive with the *.img-fluid* class. Add this class to the images on website's header and FAQ sections:
-
-```html    
-<img src="..." class="img-fluid" ...>
-...
-```
-
-Notes:
-- Adding responsive behavior usually involves adjusting the [max-width](https://www.w3schools.com/cssref/pr_dim_max-width.asp) CSS property of HTML elements. This property defines the maximum width of an element's content and it prevents the element from becoming larger than the value specified by max-width.
-- img-fluid maintains a 100% max-width regardless of the size of the screen, so images never become larger than their parent elements (containers). As a result, images are resized to fit the screen.
- 
 ## Task 4: Class utilities for text
 
 ### Text: [Bootstrap Docs > Utilities > Text](https://getbootstrap.com/docs/5.3/utilities/text/)
@@ -166,7 +160,7 @@ Change the background color to *ligth* of the FAQ section using the class:
 
 Bootstrap enables more comprehensive customization for working with colors. For now, we will use the default [color system](https://getbootstrap.com/docs/5.3/customize/color/). You can also use this system for defining [background colors](https://getbootstrap.com/docs/5.3/utilities/background/) of any HTML element.
 
-## Task 7: Class utilities for spacing
+## Task 6: Class utilities for spacing
 
 Reference: [Bootstrap Docs > Utilities > Spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/)
 
@@ -192,30 +186,24 @@ Add a gap between the transaprency and header sections by adjusting the top marg
 
 Adjust the margin and padding of the FAQ and footer sections.
 
-## Task 8: Adding icons
+## Task 7: Adding icons
 Reference: https://icons.getbootstrap.com/
 
 Finally, try out Bootstrap Icons library for adding icons to your webpage. To use Bootstrap icons library, you need to add the corresponding CSS resource into the \<head\> tag:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 ```
 
-Remember we adjusted the color of the warning statement in the first guided visit option? Add an exclamation icon to increase the attention of the viewer:
+Add a chat icon preceeding the *Contact Us* phrase on the navigation menu:
 
 ```html
-<i class="bi-exclamation-triangle"></i>
-```
->Icons are also a great way to make your content more accessible for people with color blindness.
-
-Final result:
-```html
-Cross the four kilometres in a kayak guided by a local guide. <strong class="text-warning fw-bold"><i class="bi-exclamation-triangle"></i> This guided visit is physically demanding, and we recommend it for only those in excellent physical condition.</strong>
+<i class="bi-chat-text-fill me-2"></i>
 ```
 
 ## Part II: Content Panels
 
-## Task 9: [Slider](https://getbootstrap.com/docs/5.3/components/carousel/)
+## Task 8: [Slider](https://getbootstrap.com/docs/5.3/components/carousel/)
 
 A slider positions a series of images next to each other but only shows one at a time. The images then slide from one to the next. In bootstrap, the slider is called carousel.
 
@@ -259,7 +247,7 @@ Notes:
 - The *data-bs-ride* attribute controls the autoplay
 - The carousel uses the *[d-block](https://getbootstrap.com/docs/4.0/utilities/display/)* and *[w-100](https://getbootstrap.com/docs/4.0/utilities/sizing/)* to ensure on carousel images to prevent browser default image alignment.
 
-## Task 10: [Accordion](https://getbootstrap.com/docs/5.3/components/accordion/)
+## Task 9: [Accordion](https://getbootstrap.com/docs/5.3/components/accordion/)
 
 The accordion comprises a collection of content organized as pairs of titles and panels. When you click on a title of an accordion, its corresponding panel expands to reveal the content.
 
@@ -268,7 +256,7 @@ The accordion comprises a collection of content organized as pairs of titles and
 <div class="accordion" id="faq-content">
     <article class="accordion-item">
         <h2 class="accordion-header" id="heading-1">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
                 data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">
                 [FAQ 1]
             </button>
@@ -284,7 +272,7 @@ The accordion comprises a collection of content organized as pairs of titles and
     </article>
     <article class="accordion-item">
         <h2 class="accordion-header" id="heading-2">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
                 data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
                 [FAQ 2]
             </button>
@@ -301,3 +289,63 @@ The accordion comprises a collection of content organized as pairs of titles and
 </div>
 <!-- End of accordion -->
 ```
+## Task 10: [Modal Window](https://getbootstrap.com/docs/5.3/components/modal/)
+
+Also known as pop-up, the modal window is content that appears "in front of" the rest of the page's content.
+
+We will create a "Contact Us" [form](https://getbootstrap.com/docs/5.0/forms/overview/
+) as a modal using Bootstrap modal component.
+
+The template provided to you already contains, as part of the navigation bar, the button to trigger the modal window:
+
+```html
+<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
+    data-bs-target="#feedbackModal">
+    <span class="d-flex align-items-center">
+        <i class="bi-chat-text-fill me-2"></i>
+        <span class="small">Contact Us</span>
+    </span>
+</button>
+```
+
+The content for the modal window will typically sit within the page, but it is hidden when the page loads using CSS. Add the modal content at the bottom of the page:
+
+```html
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title" id="feedbackModalLabel">Contact Us</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body border-0 p-4">
+                <form>
+                    <div class="form-group mb-4">
+                        <label for="email" class="form-label">Email address:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="comment" class="form-label">Comment:</label>
+                        <textarea class="form-control" id="comment" rows="3"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-secondary rounded-pill btn-lg disabled w-100" id="submitButton" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+## Other Content Panels
+
+Bootstrap also has available several other components to implement content panels:
+- [Offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/)
+- [Dropdowns](https://getbootstrap.com/docs/5.3/components/dropdowns/)
+- [Tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/)
