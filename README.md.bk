@@ -152,6 +152,7 @@ Using [text alignment](https://getbootstrap.com/docs/5.3/utilities/text/#text-al
 ```
 Notes:
 - Text alignment classes also include *text-start* for aligning text to the left and *text-end* for aligning text to the right. 
+- Since we want to center the content of the entire transparency section (heading and paragraph), we wrap all the elements in the section in a *div* element. Then, we apply the *text-center* class to this div element.
 
 ## Task 5: Class utilities for colors
 
@@ -161,9 +162,6 @@ Color utilities include predefined classes to colorize text. Change the backgrou
 - bg-black 
 - text-white
 
-Change the background color to *ligth* of the FAQ section using the class:
-- bg-light
-
 Bootstrap enables more comprehensive customization for working with colors. For now, we will use the default [color system](https://getbootstrap.com/docs/5.3/customize/color/). You can also use this system for defining [background colors](https://getbootstrap.com/docs/5.3/utilities/background/) of any HTML element.
 
 ## Task 7: Class utilities for spacing
@@ -172,7 +170,9 @@ Reference: [Bootstrap Docs > Utilities > Spacing](https://getbootstrap.com/docs/
 
 Spacing utilities provide a [notation](https://getbootstrap.com/docs/5.3/utilities/spacing/#notation) to specify a wide range of shorthand classes related to margin and padding. These shorthand classes follow the syntax {property}{sides}-{size} to set specific values of margin and padding.
 
-Add a gap between the transaprency and header sections by adjusting the top margin of the main element used to include the transparency section:
+Add a gap between the transaprency section and header sections. following the lead paragraph by adding a vertical margin. Since we want to add a margin to the entire section (title and paragraph), we wrap all the elements in the section in a *div* element that acts as a container. Then, we apply the spacing shorthand class.
+
+Add the *div* container to the "Local Communities" and "Activities" sections:
 
 ```html
 <main class="mt-5">
@@ -180,19 +180,26 @@ Add a gap between the transaprency and header sections by adjusting the top marg
     <p>
         ...
     </p>
-</main>
+</section>
 ```
 
-Note that *mt-5* follows the notation {property}{sides}-{size} where
+Note that *my-5* follows the notation {property}{sides}-{size} where
 - {property} is *m* (margin)
-- {sides} is *t* (vertical)
-- {size} is *5*
+- {sides} is *y* (vertical)
+- {size} is *4*
 
-Add a gap between the transaprency and header sections by adjusting the top margin of the main element used to include the transparency section:
+## Task 8: Creating buttons
 
-Adjust the margin and padding of the FAQ and footer sections.
+Reference: https://getbootstrap.com/docs/5.3/components/buttons/
 
-## Task 8: Adding icons
+Bootstrap includes several predefined button styles. Add a "Book here" button in each guided visit using the *btn* class:
+
+```html
+<a class="btn btn-primary btn-sm" href="javascript:void(0)">Book here</a>
+```
+> This button also specifies color and size.
+
+## Task 9: Adding icons
 Reference: https://icons.getbootstrap.com/
 
 Finally, try out Bootstrap Icons library for adding icons to your webpage. To use Bootstrap icons library, you need to add the corresponding CSS resource into the \<head\> tag:
@@ -215,7 +222,7 @@ Cross the four kilometres in a kayak guided by a local guide. <strong class="tex
 
 ## Part II: Content Panels
 
-## Task 9: [Slider](https://getbootstrap.com/docs/5.3/components/carousel/)
+## Task 10: [Slider](https://getbootstrap.com/docs/5.3/components/carousel/)
 
 A slider positions a series of images next to each other but only shows one at a time. The images then slide from one to the next. In bootstrap, the slider is called carousel.
 
@@ -259,7 +266,74 @@ Notes:
 - The *data-bs-ride* attribute controls the autoplay
 - The carousel uses the *[d-block](https://getbootstrap.com/docs/4.0/utilities/display/)* and *[w-100](https://getbootstrap.com/docs/4.0/utilities/sizing/)* to ensure on carousel images to prevent browser default image alignment.
 
-## Task 10: [Accordion](https://getbootstrap.com/docs/5.3/components/accordion/)
+## Task 11: [Cards](https://getbootstrap.com/docs/5.3/components/card/)
+
+Now, we will organize the content of the transparency using the Bootstrap cards component. A card acts as a content container that includes options for headers and footers. 
+
+We will use the *article* element to create each card:
+
+```html
+<div class="my-4 justify-content-center">
+<article class="card border-0">
+    <img class="card-img-top" src="..." alt="...">
+    <div class="card-body">
+        <h4 class="card-title text-center">[TRANSPARENCY SUBSECTION]</h4>
+        <p class="card-text">
+            <p class="mb-2">
+                [TRANSPARENCY SUBSECTION DESCRIPTION]
+            </p>
+        </p>
+    </div>
+</article>
+```
+
+> Create three cards with the content of the transparency section.
+
+## Task : [Collapse](https://getbootstrap.com/docs/5.3/components/collapse/)
+
+The transparency content may be made your webpage look saturated with too much text. We can display only a fragment of the content by default and allow the user to expand the rest.
+
+We can use the collapse component to achieve this effect. Bootstrap uses a JavaScript plugin to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the height from its current value to 0.
+
+Edit your cards content to show only one or two sentences and use the collapse component to hide the rest. Use Lorem ipsum text to hide the content:
+
+```html
+<article class="col-lg card border-0">
+    <img class="card-img-top" src="..." alt="...">
+    <div class="card-body">
+        <h4 class="card-title text-center">[TRANSPARENCY SUBSECTION]</h4>
+        <p class="card-text">
+            <p class="mb-2">
+                [TRANSPARENCY SUBSECTION DESCRIPTION]
+            </p>
+            <div class="mb-2">
+                <button class="btn btn-primary btn-sm py-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse-transparency-1" aria-expanded="false"
+                    aria-controls="ollapse-transparency-1">
+                    Read more
+                </button>
+            </div>
+            <p class="collapse" id="collapse-transparency-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod quam a ligula mollis imperdiet. Morbi rhoncus vehicula suscipit.
+            </p>
+        </p>
+    </div>
+</article>
+```
+
+> Note the collapse behavior relies on assigning an identifier to the content to be expanded (e.g., *ollapse-transparency-1*). This identifier also appears on some of the properties (e.g., *data-bs-target* and *aria-controls*) in the button element that triggers the collapsible behavior. This identifier should be unique. Thus, adding more than one card involves assigning different ids.
+
+The collapse component uses different types of HTML attributes that are common across content panels components in Bootstrap:
+- *data-bs-toggle*: data property that specifies collapsible behavior
+- *data-bs-target*: data property that specifies the id of the element to be collapsed/shown
+- *aria-expanded*: attribute that indicates whether the element is collapsed or expanded 
+- *aria-controls*: attribute that creates a cause and effect relationship. It identifies the element(s) controlled by the current element when that relationship isn't represented elsewhere on the page. The more widely the two elements are separated on the page, the more useful the aria-controls attribute becomes.
+
+The Bootstrap JavaScript plugin uses the data properties (*data-bs-target* and *data-bs-toggle*) to implement the collapsible behavior.
+
+Both *aria-expanded* and *aria-controls* correspond to the [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) standard. These attributes only expose extra information to a browser's accessibility features and do not affect a page's internal structure.
+
+## Task : [Accordion](https://getbootstrap.com/docs/5.3/components/accordion/)
 
 The accordion comprises a collection of content organized as pairs of titles and panels. When you click on a title of an accordion, its corresponding panel expands to reveal the content.
 
@@ -301,3 +375,178 @@ The accordion comprises a collection of content organized as pairs of titles and
 </div>
 <!-- End of accordion -->
 ```
+
+> Create one more accordion item. When creating your accordion, take the same considerations you took when using the collapse component, especially when assigning the identifiers for each item in your accordion.
+>
+> Also, note the first accordion item contains the *.show* class and *aria-expanded="true"*. The hidden items have *aria-expanded="false"* and their buttons have the class *.collapsed*.
+
+## Task : [Modal Window](https://getbootstrap.com/docs/5.3/components/modal/)
+
+Also known as pop-up, the modal window is content that appears "in front of" the rest of the page's content.
+
+We will create a "Contact Us" [form](https://getbootstrap.com/docs/5.3/forms/overview/
+) as a modal using Bootstrap modal component.
+
+The template provided to you already contains, as part of the navigation bar, the button to trigger the modal window:
+
+```html
+<button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
+    data-bs-target="#feedbackModal">
+    <span class="d-flex align-items-center">
+        <i class="bi-chat-text-fill me-2"></i>
+        <span class="small">Contact Us</span>
+    </span>
+</button>
+```
+
+The content for the modal window will typically sit within the page, but it is hidden when the page loads using CSS. Add the modal content at the bottom of the page:
+
+```html
+<!-- Feedback Modal-->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-gradient-primary-to-secondary p-4">
+                <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body border-0 p-4">
+                <form>
+                    <div class="form-group mb-4">
+                        <label for="email" class="form-label">Email address:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="comment" class="form-label">Comment:</label>
+                        <textarea class="form-control" id="comment" rows="3"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-secondary rounded-pill btn-lg disabled w-100" id="submitButton" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Feedback Modal-->
+```
+
+## Other Content Panels
+
+Bootstrap also has available several other components to implement content panels:
+- [Offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/)
+- [Dropdowns](https://getbootstrap.com/docs/5.3/components/dropdowns/)
+- [Tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/)
+
+## Part III: Bootstrap's Layout System 
+
+## Task : Creating containers
+Reference: [Bootstrap Docs > Layout > Containers](https://getbootstrap.com/docs/5.3/layout/containers/)
+
+Features:
+- Containers are the most basic layout element in Bootstrap and are required to use the grid system, which you will use in the next task to arrange your content in rows and columns.
+- Containers allow you to wrap your page content and then apply padding around the content.
+- They can also center your content on the page in a central column.
+
+Use the default container which sets a fixed width for screen sizes.
+
+```html
+<main class="container">
+```
+
+### Breakpoints
+
+Bootstrap containers allow you to tailor the content of your webpage to fit a specific screen size. To represent screen sizes, Bootstrap use the concept of breakpoints. [Breakpoints](https://getbootstrap.com/docs/5.3/layout/breakpoints/) are the building blocks of responsive design in Bootstrap. Bootstrap includes six default breakpoints:
+- Extra Small < 576px
+- Small (sm) >= 576px
+- Medium (md) >= 768px
+- Large (lg) >= 992px
+- Extra large (xl) >= 1200px
+- Extra extra large   (xxl) >= 1400px
+
+Each breakpoint has a dimension associated that represents a particular viewport or device screen size. The breakpoints serve as a system to specify responsive behavior in HTML elements. For example, if you want to tailor your webpage to be displayed in *large* screens (i.e., 992 pixels width or wider), you can wrap the webpage's content into a *container-lg* class container:
+
+Use containers for the top image and main heading inside the \<header\> element and the main content:
+```html
+<header>
+    <div class="container">
+        <h1>...</h1>
+        <p>...</p>
+    </div>
+</header>
+<main class="container">
+    ...
+</main>
+```
+
+## Task : Adjusting the layout
+Reference: [Bootstrap Docs > Layout > Containers](https://getbootstrap.com/docs/5.3/layout/containers/)
+
+[Bootstrap's grid layout system](https://getbootstrap.com/docs/5.3/layout/grid/) allows you to arrange content in columns and rows following a fully responsive design. The grid layout uses a twelve-column system which means the width of a single column can vary from one to twelve.
+
+When arranging your content in columns using Bootstrap grid system, you need to use a combination of *col* classes wrapped inside a *row* class container. Furthermore, you can add breakpoints to create a grid system that starts out stacked and becomes horizontal at a given breakpoint.
+
+Use the *col-lg* class to display the content of the website as two columns for large screens (*lg* breakpoint) and as one column for smaller screens:
+
+```html
+<section class="my-4 row">
+    <article class="col-lg">
+        ...
+    </article>
+    <article class="col-lg">
+        ...
+    </article>
+</div>
+```
+
+> The code above specifies the behavior at and over the large (lg) breakpoint, i.e., display the content in two columns when screen size hits the large (lg) breakpoint.
+
+Adjust the spacing between each \<article\> to add gaps both horiontally and vertically using padding (*p*) and margin (*m*) utilities:
+
+Result:
+```html
+<section class="my-4 row">
+    <article class="col-lg my-2 py-2 mx-lg-1 px-2 border border-secondary border-2">
+        ...        
+    </article>
+    <article class="col-lg my-2 py-2 mx-lg-1 px-2 border border-secondary border-2">
+        ...
+    </article>
+</div>
+```
+
+> Note that *my* and *py* adjust the vertical margin and padding of each article while *mx* and *px* adjust the horizontal margin and padding, respectively.
+
+## Task : Adjusting the form
+
+Adjust the contact form in a two-column grid. The heading and description of the form should be in the first column and the form in the second column. Make the first column narrower than the second column by varying the number of template columns in each column.
+
+```html
+<aside class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-4"> 
+            ...
+        </div>
+        <div class="col-lg-8"> 
+            ...
+        </div>
+    </div>
+</aside>
+```
+
+> Note that the content of the first column (heading and form's description) is also vertically centered due to the *align-items-center* class on the row container.
+
+## Task : Adjusting the footer
+
+Center the copyright notice on the page's footer:
+
+```html
+<footer class="text-center my-5 pt-3 border-top">...</footer>
+```
+
+> The [index.html](./index.html) file contains the final HTML document. You can view this webpage in GitHub Pages [here](https://josecarlosgt.github.io/Web-Design-and-Development/).
