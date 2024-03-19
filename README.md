@@ -5,7 +5,7 @@ In this tutorial, you will find several links to [Bootstrap official documentati
 
 ### Download the resources
 
-We will work with a design inspired in the [New Age](https://startbootstrap.com/previews/new-age) template from the [Start Bootstrap](https://startbootstrap.com/) website. Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip).
+Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip). We will work with the **index-responsive.html** file and the images included in the assets directory.
 
 ## Task 11: Create a container for the header section
 
