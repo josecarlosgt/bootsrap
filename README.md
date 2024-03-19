@@ -1,4 +1,4 @@
-# Tutorial: Styling the content of your website with Bootstrap
+# Tutorial: Bootstrap Basics
 In this tutorial, we will use a front-end/CSS framework called [Bootstrap](https://getbootstrap.com/), one of the most popular frameworks for styling websites. 
 
 In this tutorial, each task contains links to [Bootstrap official documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/). The purpose of this tutorial is to let you familiarize yourself with Bootstrap's documentation and apply Bootstrap's predefined CSS classes to style your website.
