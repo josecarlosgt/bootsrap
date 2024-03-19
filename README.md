@@ -1,5 +1,5 @@
 # Tutorial: Bootstrap Basics
-In this tutorial, we will use a front-end/CSS framework called [Bootstrap](https://getbootstrap.com/), one of the most popular frameworks for styling websites. 
+In this tutorial, we will use the front-end development framework [Bootstrap](https://getbootstrap.com/), one of the most popular frameworks for styling websites. 
 
 In this tutorial, each task contains links to [Bootstrap official documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/). The purpose of this tutorial is to let you familiarize yourself with Bootstrap's documentation and apply Bootstrap's predefined CSS classes to style your website.
 
@@ -9,7 +9,11 @@ We will work with a design inspired by the [New Age](https://startbootstrap.com/
 
 Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip). We will work with the **index.html** file and the images included in the assets directory.
 
-[Link to Café con Causa's Page narrative](https://docs.google.com/document/d/1tnplJskdtc41upRjyfd3wu_NzxDQAH3-NoEJXKJdbco/edit?usp=sharing)
+[Link to the page narrative](https://docs.google.com/document/d/1tnplJskdtc41upRjyfd3wu_NzxDQAH3-NoEJXKJdbco/edit?usp=sharing)
+
+Link to the mockup designs:
+- [Main page](https://drive.google.com/file/d/1R7fQwVBQPnJ3DMpoc4sUJmozKeDux1HM/view?usp=sharing)
+- [Main page with modal window](https://drive.google.com/file/d/1iaGfRBPpbkQHqXAf56o62qmWy_FzNQh8/view?usp=sharing)
 
 ## Task 1: Page's settings and introduction
 
@@ -23,7 +27,7 @@ Let's first specify the page's title and meta description:
 ## Task 2: Install Bootstrap
 Reference: [Bootstrap Docs > Introduction](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 
-The easiest way to add Bootstrap to your website is by using the content delivery network (CDN) servers recommended by Boostrap. Other Bootstrap methods require downloading the source files, which allows higher customization.
+The easiest way to add Bootstrap to your website is by using the content delivery network (CDN) servers recommended by Boostrap. Other approaches require downloading the source files, which allows higher customization.
 
 We will use the CDN resources:
 - Include the CSS resource into the \<head\> element
@@ -171,7 +175,7 @@ The following slider provides buttons that allow users to navigate between each 
 
 ```html
 <!-- Slider -->
-<div id="carousel-films" class="carousel slide" data-bs-ride="carousel">
+<div id="carousel-coffee" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="assets/img/placeholder.png" class="d-block w-100" alt="...">
@@ -184,12 +188,12 @@ The following slider provides buttons that allow users to navigate between each 
         </div>
     </div>
     <!-- Slider controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-films"
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-coffee"
         data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel-films"
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel-coffee"
         data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
