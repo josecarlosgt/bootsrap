@@ -7,7 +7,7 @@ In this tutorial, each task contains links to [Bootstrap official documentation]
 
 We will work with a design inspired by the [New Age](https://startbootstrap.com/previews/new-age) template from the [Start Bootstrap](https://startbootstrap.com/) website.
 
-Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip). We will work with the **index-basics.html** file and the images included in the assets directory.
+Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip). We will work with the **index.html** file and the images included in the assets directory.
 
 [Link to Café con Causa's Page narrative](https://docs.google.com/document/d/1tnplJskdtc41upRjyfd3wu_NzxDQAH3-NoEJXKJdbco/edit?usp=sharing)
 
