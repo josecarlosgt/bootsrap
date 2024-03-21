@@ -1,13 +1,11 @@
-# Tutorial: Styling the content of your website with Bootstrap
-In this tutorial, we will use a front-end/CSS framework called [Bootstrap](https://getbootstrap.com/), one of the most popular frameworks for styling websites. 
-
-In this tutorial, you will find several links to [Bootstrap official documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) in each task. This tutorial's main purpose is to familiarize yourself with the Bootstrap documentation and apply Bootstrap pre-defined CSS classes to style your website.
+# Tutorial: Bootstrap's Grid System
+In this tutorial, we will use Bootstrap's grid system to style the content of a webpage. 
 
 ### Download the resources
 
-Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip). We will work with the **index-responsive.html** file and the images included in the assets directory.
+Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip). We will work with the **index.html** file and the images included in the assets directory.
 
-## Task 11: Create a container for the header section
+## Task 1: Create a responsive header
 
 [Bootstrap's grid system](https://getbootstrap.com/docs/5.3/layout/grid/) allows you to arrange content in columns and rows following a fully responsive design. The grid layout uses a twelve-column system which means the width of a single column can vary from one to twelve.
 
@@ -15,12 +13,15 @@ When arranging your content in columns using Bootstrap grid system, you need to 
 
 ```html
 <header>
+    ...
     <div class="container">
         <div class="row">
             <div class="col">
+                <!-- Tagline -->
                 ...
             </div>
             <div class="col">
+                <!-- Slider -->
                 ...
             </div>
         </div>
@@ -38,6 +39,7 @@ You may also notice that Bootstrap automatically calculates the size of each col
 
 ```html
 <header>
+    ...
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
@@ -51,89 +53,65 @@ You may also notice that Bootstrap automatically calculates the size of each col
 </header>
 ```
 
-## Task 12: Create a container for the FAQs section
+## Task 2: Create a responsive main section
 
-Create a container for the FAQs section that for large screens display two columns of equal size:
-1. On the first column (start), display the following image:
-```html
-<img src="assets/img/faq.jpeg" class="img-fluid" alt="Cup of coffee and coffee beans">
-```
-
-2. On the second column (end) display the accordion with the FAQs content.
-
-You may also specify [gutters](https://getbootstrap.com/docs/5.3/layout/gutters/) (padding between columns) to keep a gap between the image and accordion when the content stacks into one single column:
+Implement a three-column grid for the three subsections of the main (transparency) section:
 
 ```html
-<div class="row g-5">...</div>
-```
-
-## Task 13: Create a responsive navigation menu
-
-Use the [navbar](https://getbootstrap.com/docs/5.3/components/navbar/) component to add responsive behaviour to the navigation bar at the top:
-
-```html
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container px-5">
-        <a class="navbar-brand fw-bold" href="#page-top">Start</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="bi-list"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                <li class="nav-item"><a class="nav-link me-lg-3" href="#transparency">Transparency</a></li>
-                <li class="nav-item"><a class="nav-link me-lg-3" href="#faq">FAQ</a></li>
-            </ul>
-            <button class="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal"
-                data-bs-target="#feedbackModal">
-                <span class="d-flex align-items-center">
-                    <i class="bi-chat-text-fill me-2"></i>
-                    <span class="small">Contact Us</span>
-                </span>
-            </button>
-        </div>
-    </div>
-</nav>
-```
-
-## Task 14: Adjust the layout
-
-Note the navigation bar above uses a *fixed-top* class that allows the user to access the navigation bar anywhere on the page. Carefully revise the appereance of the page and perform any necessary adjustments.
-
-## Task 15: Add a three-column panel using the [Cards](https://getbootstrap.com/docs/5.3/components/card/)
-
-First, create a container for the main (transparency) section:
-
-```html
-<main id="transparency" class="pt-5">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="display-5">Transparency</h2>
-            <p class="lead">We believe in the importance of being transparent in everything we do by providing you with information on costs, expenses, earnings and impact data.</p>
-        </div>
-    <div class="row my-4 g-0 justify-content-center">
-        <!-- Cards content -->
+<main id="transparency" class="... container">
+    <!-- Section heading -->
+    ...
+    <div class="row">
+        <!-- Subsection 1 -->
+        <article class="col-lg ...">
+            ...
+        </article>
+        <!-- Subsection 2 -->
+        <article class="col-lg ...">
+            ...
+        </article>
+        <!-- Subsection 3 -->
+        <article class="col-lg ...">
+            ...
+        </article>
     </div>
 </main>
 ```
 
-Then, organize the content of the transparency using the Bootstrap cards component. A card acts as a content container that includes options for headers and footers. 
-
-We will use the *article* element to create each card:
+You may also specify [gutters](https://getbootstrap.com/docs/5.3/layout/gutters/) (padding between columns) to eliminate the gap between the subsections:
 
 ```html
-<article class="card border-0">
-    <img class="card-img-top" src="..." alt="...">
-    <div class="card-body">
-        <h4 class="card-title text-center">[TRANSPARENCY SUBSECTION]</h4>
-        <p class="card-text">
-            <p class="mb-2">
-                [TRANSPARENCY SUBSECTION DESCRIPTION]
-            </p>
-        </p>
+<main id="transparency" class="container ...">
+    <!-- Section heading -->
+    ...
+    <div class="row g-0">
+        ...
     </div>
-</article>
+</main>
 ```
 
-Create three cards with the content of the transparency section.
+## Task 3: Create a responsive FAQs section
+
+Create a container for the FAQs section that for large screens display two columns of equal size:
+
+```html
+<aside id="faq" class="container ...">
+    <!-- Section heading -->
+    ...
+    <div class="row">
+        <!-- Section image -->
+        <div class="col-lg-6">
+            ...
+        </div>
+        <div class="col-lg-6">
+            <!-- Accordion -->
+        </div>
+    </div>
+</aside>
+```
+
+Add the [img-fluid](https://getbootstrap.com/docs/5.3/content/images/) class to the section image to make it responsive:
+
+```html
+<img src="assets/img/faq.jpeg" class="img-fluid" alt="Cup of coffee and coffee beans">
+```
