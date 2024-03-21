@@ -3,7 +3,7 @@ In this tutorial, we will use Bootstrap's grid system to style the content of a 
 
 ### Download the resources
 
-Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-1-styling/base.zip). We will work with the **index.html** file and the images included in the assets directory.
+Download the base code from [here](https://github.com/josecarlosgt/bootstrap/raw/tutorial-grid-system/base.zip). We will work with the **index.html** file and the images included in the assets directory.
 
 ## Task 1: Create a responsive header
 
