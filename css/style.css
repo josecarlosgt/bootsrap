@@ -1,0 +1,48 @@
+.rectangle {
+    padding: 1rem;
+    background-color: #5DADE2;
+    margin: 0 0 0.5rem 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Fluid images */
+img {
+    max-width: 100%;
+}
+
+/* Common breakpoints for devices with different screen sizes: 
+
+    Mobile devices: screen size < 576px
+    iPads, Tablets: 576px — 768px: 
+    Small screens, laptops, and larger devices: > 768px
+
+Reference:
+https://www.lambdatest.com/blog/how-to-use-css-breakpoints-for-responsive-design/
+*/
+
+.container {
+    margin-top: 0.5rem;
+
+    /* Default layout: mobile devices (screen size < 576px) */
+    column-count: 1;
+}
+
+/* Fluid grid with media queries */
+
+/* iPads, Tablets: (screen sizes > 576px) */
+
+@media (min-width: 576px) {
+    .container {
+        column-count: 2;
+    }
+}
+
+
+/* Laptops, desktops and larger devices: (screen sizes > 768px) */
+
+@media (min-width: 768px) {
+    .container {
+        column-count: 4;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Bootstrap v5.0 
+            https://getbootstrap.com/docs/5.0/
+        -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Responsive Design Example with Bootstrap</title>
+
+    <style>
+        .rectangle {
+            padding: 1rem;
+            background-color: #5DADE2;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container pt-2">
+        <picture>
+            <source media="(min-width:768px)" srcset="images/header-large.jpeg">
+            <source media="(min-width:576px)" srcset="images/header-medium.jpeg">
+            <img srcset="images/header-small.jpeg" alt="Header image with waves of different colors" class="img-fluid">
+        </picture>
+    </header>
+    <main class="container pt-2">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <p class="rectangle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <p class="rectangle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <p class="rectangle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <p class="rectangle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
