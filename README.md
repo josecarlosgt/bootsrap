@@ -156,19 +156,19 @@ Note that *mt-5* follows the notation {property}{sides}-{size} where
 - {sides} is *t* (vertical)
 - {size} is *5*
 
-Adjust the margin of footer section.
+Adjust the margin of the footer section.
 
 ```html
-<footer class="bg-black text-white text-center py-5 p-5">
+<footer class="bg-black text-white text-center py-5">
     &copy; Cafe con Causa 2024. All Rights Reserved.
 </footer>
 ```
 
 ## Task 7: Implement a responsive layout
 
-[Bootstrap's grid system](https://getbootstrap.com/docs/5.3/layout/grid/) allows you to arrange content in columns and rows following a  responsive design. The grid layout uses a twelve-column system which means the width of a single column can vary from one to twelve.
+[Bootstrap's grid system](https://getbootstrap.com/docs/5.3/layout/grid/) allows you to arrange content in columns and rows following a  responsive design. The grid layout uses a twelve-column system, which means the width of a single column can vary from one to twelve.
 
-When arranging your content in columns using Bootstrap grid system, you need to use a combination of *col* classes wrapped inside a *row* class. Add the following structure to the header section:
+When arranging your content in columns using Bootstrap's grid system, you need to use a combination of *col* classes wrapped inside a *row* class. Add the following structure to the header section:
 
 ```html
 <div class="container">
@@ -204,4 +204,4 @@ You may also notice that Bootstrap automatically calculates the size of each col
 </div>
 ```
 
-Using the code above, implement a responsive layout following the layout of the [page's mockup desing](https://drive.google.com/file/d/1R7fQwVBQPnJ3DMpoc4sUJmozKeDux1HM/view?usp=sharing)
+Using the code above, implement a responsive layout following the layout of the [page's mockup design](https://drive.google.com/file/d/1R7fQwVBQPnJ3DMpoc4sUJmozKeDux1HM/view?usp=sharing)
