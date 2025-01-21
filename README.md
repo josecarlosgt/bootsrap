@@ -12,7 +12,7 @@ After deciding on a place and stories, complete the following tasks.
 
 ## Task 0: Get the template
 
-We will use the [One Page Wonder](https://startbootstrap.com/theme/one-page-wonder) template from the [Start Bootstrap](https://startbootstrap.com/) website. You can download the original template from the Start Bootstrap or download a pre-customized template from [here](https://github.com/josecarlosgt/bootsrap/blob/tutorial-templates-landmark/landmark-template.zip?raw=true). The pre-customized template will make it easier to complete the following tasks.
+We will use the [One Page Wonder](https://startbootstrap.com/theme/one-page-wonder) template from the [Start Bootstrap](https://startbootstrap.com/) website. You can download the original template from the Start Bootstrap or download a pre-customized template from [here](https://github.com/josecarlosgt/bootstrap/raw/refs/heads/tutorial-template-customization/landmark-template.zip). The pre-customized template will make it easier to complete the following tasks.
 
 ## Task 1: Customize the page's settings
 
